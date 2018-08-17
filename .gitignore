@@ -5,3 +5,7 @@
 /.vs/config/applicationhost.config
 ExcelTransferUtility/obj/
 *.pubxml
+ExcelTransferUtility/bin/
+Packages/
+.vs/
+*.csproj.user

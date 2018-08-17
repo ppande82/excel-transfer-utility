@@ -48,7 +48,11 @@ namespace ExcelTransferUtility.sitecore_modules.Web.Excel_Transfer_Utility.Expor
             {
                 foreach (var str2 in _fields)
                 {
-                    builder.Append(MakeValueCsvFriendly(dictionary[str2])).Append(",");
+                    //PP: Adding a check to make sure the field is present in the dictionary
+                    if (dictionary.ContainsKey(str2))
+                    {
+                        builder.Append(MakeValueCsvFriendly(dictionary[str2])).Append(",");
+                    }
                 }
                 builder.AppendLine();
             }
